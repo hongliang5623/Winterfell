@@ -1,0 +1,14 @@
+import urllib.request,os; 
+pf='Package Control.sublime-package';
+ipp=sublime.installed_packages_path();
+os.makedirs(ipp) if not os.path.exists(ipp) else None;
+urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler()));
+open(os.path.join(ipp,pf),'wb').write(urllib.request.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read());
+print 'Please restart Sublime Text to finish installation’;
+
+
+http://goclipse.googlecode.com/svn/trunk/goclipse-update-site/plugins/
+
+https://github.com/GoClipse/goclipse/blob/latest/documentation/Installation.md#installation
+
+http://p.dapps.douban.com/p/065338306f134719978784edefabb7f0.
